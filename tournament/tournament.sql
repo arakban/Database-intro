@@ -18,3 +18,4 @@ CREATE TABLE players (
 	matches INTEGER DEFAULT 0
 	);
 
+DROP TABLE IF EXISTS matches; 
