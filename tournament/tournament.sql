@@ -19,3 +19,11 @@ CREATE TABLE players (
 	);
 
 DROP TABLE IF EXISTS matches; 
+
+CREATE TABLE matches (
+	match_no SERIAL PRIMARY KEY,
+	winner_id INTEGER,
+	loser_id INTEGER,
+	FOREIGN KEY (winner_id) REFERENCES players(player_id),
+	FOREIGN KEY (loser_id) REFERENCES players(player_id)
+	);
